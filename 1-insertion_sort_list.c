@@ -1,16 +1,17 @@
 #include "sort.h"
 /**
- *insertion_sort - Sorts a doubly linked list of ints in ascending order.
+ *insertion_sort_list - Sorts a doubly linked list of ints in ascending order.
  *@list: The list to be sorted.
  */
-void insertion_sort_list(listint_t **list) {
+void insertion_sort_list(listint_t **list)
+{
 	listint_t *node;
 
 	if (list == NULL || (*list)->next == NULL)
 		return;
 	node = (*list)->next;
 
-	while( node != NULL)
+	while (node != NULL)
 	{
 		while ((node->prev) && (node->prev->n > node->n))
 		{
